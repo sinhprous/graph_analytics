@@ -157,6 +157,7 @@ def run(args):
                 if args.model not in ["gcnmf", "pagnn"]
                 else torch.full_like(x, float("nan"))
             )
+            # import pdb; pdb.set_trace()
             logger.debug(f"Feature filling completed. It took: {time.time() - start:.2f}s")
 
             model = get_model(
